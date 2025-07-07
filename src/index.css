@@ -119,10 +119,16 @@ h6 {
    display: flex;
    align-items: center;
    justify-content: space-between;
-   height: 70px;
+   height: 60px;
    max-width: 1200px;
    margin: 0 auto;
    padding: 0 32px;
+}
+.header-container .left {
+   height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }
 .left .logo {
    height: 22px;
@@ -281,5 +287,105 @@ h6 {
    }
    .banner-content p {
       font-size: 1rem;
+   }
+}
+
+.about-section {
+   margin: 120px 0;
+   padding: 0 24px;
+}
+
+.about-container {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 64px;
+   max-width: 1200px;
+   margin: 0 auto;
+}
+
+.about-img img {
+   width: 340px;
+   height: 440px;
+   object-fit: cover;
+   border-radius: 12px;
+   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+   background: #fff;
+}
+
+.about-content {
+   flex: 1;
+   min-width: 320px;
+}
+
+.about-content h2 {
+   font-size: 2.4rem;
+   letter-spacing: 0.3em;
+   font-weight: 700;
+   margin-bottom: 18px;
+   color: #111;
+}
+
+.about-content .highlight {
+   color: #e74c3c;
+   letter-spacing: 0.1em;
+}
+
+.about-content p {
+   color: #888;
+   font-size: 1.1rem;
+   margin-bottom: 32px;
+   line-height: 1.7;
+   max-width: 600px;
+}
+
+.about-skills {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 18px 32px;
+   margin-bottom: 32px;
+}
+
+.about-skills div {
+   display: flex;
+   align-items: center;
+   font-size: 1.1rem;
+   font-weight: 600;
+   color: #111;
+}
+
+.about-icon {
+   color: #111;
+   margin-right: 10px;
+   font-size: 1.2em;
+}
+
+.about-btn {
+   background: #e74c3c;
+   color: #fff;
+   border: none;
+   padding: 16px 38px;
+   border-radius: 6px;
+   font-size: 1.1rem;
+   font-weight: 600;
+   cursor: pointer;
+   transition: background 0.2s;
+}
+
+.about-btn:hover {
+   background: #c0392b;
+}
+
+@media (max-width: 900px) {
+   .about-container {
+      flex-direction: column;
+      gap: 32px;
+      align-items: stretch;
+   }
+   .about-img img {
+      width: 100%;
+      max-width: 340px;
+      margin: 0 auto;
+      display: block;
    }
 }
