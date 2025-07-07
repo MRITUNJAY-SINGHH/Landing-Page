@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+html {
+   overflow-x: hidden;
+   padding: 0px;
+   margin: 0px;
+}
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   text-decoration: none;
+   list-style: none;
+}
+body {
+   font-family: 'Mulish' !important;
+   font-size: 15px;
+   line-height: 30px;
+   letter-spacing: 1px;
+   word-wrap: break-word;
+   font-weight: 400;
+   background-color: #fff;
+   color: #767676;
+}
+
+::-webkit-input-placeholder {
+   /* WebKit, Blink, Edge */
+   color: #6f6f6f;
+}
+
+:-moz-placeholder {
+   /* Mozilla Firefox 4 to 18 */
+   color: #6f6f6f;
+   opacity: 1;
+}
+
+::-moz-placeholder {
+   /* Mozilla Firefox 19+ */
+   color: #6f6f6f;
+   opacity: 1;
+}
+
+:-ms-input-placeholder {
+   /* Internet Explorer 10-11 */
+   color: #6f6f6f;
+}
+
+::-ms-input-placeholder {
+   /* Microsoft Edge */
+   color: #6f6f6f;
+}
+
+::placeholder {
+   /* Most modern browsers support this now. */
+   color: #6f6f6f;
+}
+
+.container {
+   max-width: 1200px;
+   width: 100%;
+   margin-left: auto;
+   margin-right: auto;
+   height: auto;
+   padding: 0px 40px;
+   position: relative;
+   clear: both;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-weight: 500;
+   line-height: 1.4;
+   font-family: 'Poppins';
+   color: #000;
+}
+
+h1 {
+   font-size: 45px;
+}
+
+h2 {
+   font-size: 36px;
+}
+
+h3 {
+   font-size: 30px;
+}
+
+h4 {
+   font-size: 24px;
+}
+
+h5 {
+   font-size: 20px;
+}
+
+h6 {
+   font-size: 16px;
+}
+
+.main-header {
+   position: fixed;
+   width: 100%;
+   top: 0;
+   left: 0;
+   z-index: 100;
+   background: transparent;
+   transition: background 0.3s, box-shadow 0.3s;
+   padding: 20px 0;
+}
+.main-header.scrolled {
+   background: #fff;
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+.header-container {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   height: 70px;
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 0 32px;
+}
+.left .logo {
+   height: 22px;
+}
+.nav {
+   display: flex;
+   align-items: center;
+}
+.nav ul {
+   display: flex;
+   gap: 36px;
+   list-style: none;
+   margin: 0;
+   padding: 0;
+}
+.nav ul li a {
+   font-weight: 700;
+   font-size: 15px;
+   color: #fff;
+   text-decoration: none;
+   transition: color 0.2s;
+   position: relative;
+}
+.main-header.scrolled .nav ul li a {
+   color: #111;
+}
+.nav ul li a.active {
+   color: #e74c3c;
+}
+.menu-btn,
+.close-btn {
+   display: none;
+   background: none;
+   border: none;
+   font-size: 2rem;
+   color: #fff;
+   cursor: pointer;
+}
+.main-header.scrolled .menu-btn,
+.main-header.scrolled .close-btn {
+   color: #111;
+}
+
+/* Mobile styles */
+@media (max-width: 900px) {
+   .header-container {
+      padding: 0 16px;
+   }
+   .nav ul {
+      gap: 24px;
+   }
+}
+@media (max-width: 700px) {
+   .nav {
+      position: fixed;
+      top: 0;
+      right: -100vw;
+      width: 70vw;
+      height: 100vh;
+      background: #fff;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      padding: 32px 24px;
+      transition: right 0.3s;
+      box-shadow: -2px 0 12px rgba(0, 0, 0, 0.08);
+      z-index: 200;
+   }
+   .nav.open {
+      right: 0;
+   }
+   .nav ul {
+      flex-direction: column;
+      gap: 32px;
+      width: 100%;
+   }
+   .nav ul li a {
+      color: #111;
+      font-size: 22px;
+   }
+   .nav ul li a.active {
+      color: #e74c3c;
+   }
+   .menu-btn {
+      display: block;
+      color: #fff;
+      z-index: 300;
+   }
+   .main-header.scrolled .menu-btn {
+      color: #111;
+   }
+   .close-btn {
+      display: block;
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      color: #111;
+   }
+   .left .logo {
+      height: 32px;
+   }
+}
+
+.banner-section {
+   position: relative;
+   min-height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+   background: url('https://marketifythemes.net/html/grax/img/slider/2.jpg')
+      no-repeat center center/cover;
+   overflow: hidden;
+}
+.banner-overlay {
+   position: absolute;
+   inset: 0;
+   background: rgba(0, 0, 0, 0.2);
+   z-index: 1;
+}
+
+.banner-content,
+.banner-shape {
+   position: relative;
+   z-index: 2;
+}
+
+.banner-content h1 {
+   font-size: 72px;
+   font-weight: 800;
+   color: #fff;
+   margin-bottom: 18px;
+   letter-spacing: 1px;
+}
+.banner-content p {
+   font-size: 1.3rem;
+   color: #bdbdbd;
+   font-weight: 600;
+   letter-spacing: 1px;
+}
+.banner-shape {
+   position: absolute;
+   left: 0;
+   bottom: -14px;
+   width: 100%;
+   z-index: 3;
+}
+.banner-shape svg polygon {
+   fill: #fff;
+}
+@media (max-width: 700px) {
+   .banner-content {
+      margin-left: 5vw;
+   }
+   .banner-content h1 {
+      font-size: 2.2rem;
+   }
+   .banner-content p {
+      font-size: 1rem;
+   }
+}
