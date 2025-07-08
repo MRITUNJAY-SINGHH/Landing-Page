@@ -12,6 +12,7 @@ import {
 } from 'react-icons/fa';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Preloader from '../components/Preloader';
 
 const Home = () => {
    useEffect(() => {
@@ -60,6 +61,7 @@ const Home = () => {
 
    return (
       <div>
+         {/* <Preloader /> */}
          <Header />
 
          {/* Banner Section Start */}
