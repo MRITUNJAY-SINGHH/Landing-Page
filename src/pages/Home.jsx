@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import { FaAngleDoubleRight } from 'react-icons/fa';
@@ -10,8 +10,18 @@ import {
    FaTwitter,
    FaFacebookF,
 } from 'react-icons/fa';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Home = () => {
+   useEffect(() => {
+      AOS.init({
+         duration: 900,
+         once: true,
+         easing: 'ease-out-cubic',
+      });
+   }, []);
+
    const newsData = [
       {
          img: 'img/news/1.jpg',
@@ -51,12 +61,17 @@ const Home = () => {
    return (
       <div>
          <Header />
+
          {/* Banner Section Start */}
          <section className='banner-section' id='home'>
             <div className='banner-overlay'></div>
             <div className='banner-content container'>
-               <h1>Alan Walker</h1>
-               <p>Web &amp; Mobile App Developer</p>
+               <h1 data-aos='fade-up' data-aos-delay='100'>
+                  Alan Walker
+               </h1>
+               <p data-aos='fade-up' data-aos-delay='400'>
+                  Web &amp; Mobile App Developer
+               </p>
             </div>
             <div className='banner-shape'>
                <svg
@@ -78,10 +93,18 @@ const Home = () => {
          {/* About Section Start */}
          <section className='about-section' id='about'>
             <div className='about-container container'>
-               <div className='about-img'>
+               <div
+                  className='about-img'
+                  data-aos='fade-right'
+                  data-aos-delay='100'
+               >
                   <img src='img/about/1.jpg' alt='About' />
                </div>
-               <div className='about-content'>
+               <div
+                  className='about-content'
+                  data-aos='fade-right'
+                  data-aos-delay='300'
+               >
                   <h2>
                      ABOUT <span className='highlight'>ME</span>
                   </h2>

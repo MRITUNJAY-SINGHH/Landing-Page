@@ -55,6 +55,15 @@ body {
    color: #6f6f6f;
 }
 
+.banner-content h1,
+.banner-content p {
+   opacity: 0;
+   transition: opacity 0.6s, transform 0.6s;
+}
+[data-aos].aos-animate {
+   opacity: 1 !important;
+}
+
 .container {
    max-width: 1200px;
    width: 100%;

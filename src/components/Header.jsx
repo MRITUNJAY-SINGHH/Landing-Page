@@ -28,7 +28,11 @@ const Header = () => {
    };
 
    return (
-      <header className={`main-header${scrolled ? ' scrolled' : ''}`}>
+      <header
+         className={`main-header${scrolled ? ' scrolled' : ''}`}
+         data-aos='fade-down'
+         data-aos-delay='900'
+      >
          <div className='container header-container'>
             {scrolled ? (
                <div className='left'>
