@@ -1,5 +1,14 @@
+import Footer from '../components/Footer';
 import Header from '../components/Header';
 import { FaAngleDoubleRight } from 'react-icons/fa';
+import {
+   FaMapMarkerAlt,
+   FaEnvelope,
+   FaPhone,
+   FaDribbble,
+   FaTwitter,
+   FaFacebookF,
+} from 'react-icons/fa';
 
 const Home = () => {
    return (
@@ -29,7 +38,6 @@ const Home = () => {
             </div>
          </section>
          {/* Banner Section End */}
-
          {/* About Section Start */}
          <section className='about-section' id='about'>
             <div className='about-container container'>
@@ -79,7 +87,6 @@ const Home = () => {
             </div>
          </section>
          {/* About Section End */}
-
          {/* Portfolio Section Start */}
          <section className='portfolio-section' id='portfolio'>
             <div className='container'>
@@ -105,6 +112,138 @@ const Home = () => {
             </div>
          </section>
          {/* Portfolio Section End */}
+         {/* Skills Section Start */}
+         <section className='skills-section'>
+            <div className='skills-container container'>
+               <div className='skills-left'>
+                  <h2 className='skills-title'>
+                     I have high skills in developing
+                     <br />
+                     and programming
+                  </h2>
+                  <p className='skills-desc'>
+                     I was doing everything in my power to provide me with all
+                     the experiences to provide cost-effective and high quality
+                     products to satisfy my customers all over the world
+                  </p>
+               </div>
+               <div className='skills-right'>
+                  <div className='skill-bar'>
+                     <div className='skill-info'>
+                        <span>Web Development</span>
+                        <span>95%</span>
+                     </div>
+                     <div className='bar-bg'>
+                        <div
+                           className='bar-fill'
+                           style={{ width: '95%' }}
+                        ></div>
+                     </div>
+                  </div>
+                  <div className='skill-bar'>
+                     <div className='skill-info'>
+                        <span>Brand Identity</span>
+                        <span>80%</span>
+                     </div>
+                     <div className='bar-bg'>
+                        <div
+                           className='bar-fill'
+                           style={{ width: '80%' }}
+                        ></div>
+                     </div>
+                  </div>
+                  <div className='skill-bar'>
+                     <div className='skill-info'>
+                        <span>Logo Design</span>
+                        <span>90%</span>
+                     </div>
+                     <div className='bar-bg'>
+                        <div
+                           className='bar-fill'
+                           style={{ width: '90%' }}
+                        ></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         {/* Skills Section End */}
+
+         {/* News Section Start */}
+
+         {/* Contact Section Start */}
+
+         <section className='contact-section' id='contact'>
+            <h2 className='contact-heading container'>
+               GET IN <span className='highlight'>TOUCH</span>
+            </h2>
+            <div className='contact-container container'>
+               <div className='contact-left'>
+                  <p className='contact-desc'>
+                     Please fill out the form on this section to contact with
+                     me. Or call between 9:00 a.m. and 8:00 p.m. ET, Monday
+                     through Friday
+                  </p>
+                  <ul className='contact-info'>
+                     <li>
+                        <FaMapMarkerAlt className='contact-icon' />
+                        <span>
+                           <b>Address:</b>
+                        </span>
+                        <span>Brook 103, New York, USA</span>
+                     </li>
+                     <li>
+                        <FaEnvelope className='contact-icon' />
+                        <span>
+                           <b>Email:</b>
+                        </span>
+                        <span>example@gmail.com</span>
+                     </li>
+                     <li>
+                        <FaPhone className='contact-icon' />
+                        <span>
+                           <b>Phone:</b>
+                        </span>
+                        <span>+77 033 442 55 57</span>
+                     </li>
+                     <li>
+                        <FaDribbble className='contact-icon' />
+                        <span>
+                           <b>Website:</b>
+                        </span>
+                        <span>www.myaddress.com</span>
+                     </li>
+                     <li>
+                        <FaTwitter className='contact-icon' />
+                        <span>
+                           <b>Twitter:</b>
+                        </span>
+                        <span>@twitternickname</span>
+                     </li>
+                     <li>
+                        <FaFacebookF className='contact-icon' />
+                        <span>
+                           <b>Facebook:</b>
+                        </span>
+                        <span>@facebooknickname</span>
+                     </li>
+                  </ul>
+               </div>
+               <form className='contact-form'>
+                  <input type='text' placeholder='Name' required />
+                  <input type='email' placeholder='Email' required />
+                  <textarea placeholder='Message' rows={6} required></textarea>
+                  <button type='submit' className='contact-btn'>
+                     Send Message
+                  </button>
+               </form>
+            </div>
+         </section>
+         {/* Contact Section End */}
+
+         {/* Footer Section Start */}
+         <Footer />
+         {/* Footer Section End */}
       </div>
    );
 };
