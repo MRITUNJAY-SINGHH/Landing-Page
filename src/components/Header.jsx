@@ -30,9 +30,16 @@ const Header = () => {
    return (
       <header className={`main-header${scrolled ? ' scrolled' : ''}`}>
          <div className='container header-container'>
-            <div className='left'>
-               <img src='img/logo/logo.png' alt='Logo' className='logo' />
-            </div>
+            {scrolled ? (
+               <div className='left'>
+                  <img src='img/logo/dark.png' alt='Logo' className='logo' />
+               </div>
+            ) : (
+               <div className='left'>
+                  <img src='img/logo/logo.png' alt='Logo' className='logo' />
+               </div>
+            )}
+
             <nav className={`nav${menuOpen ? ' open' : ''}`}>
                <ul>
                   {navLinks.map((link) => (

@@ -32,7 +32,7 @@ const Home = () => {
 
          {/* About Section Start */}
          <section className='about-section' id='about'>
-            <div className='about-container'>
+            <div className='about-container container'>
                <div className='about-img'>
                   <img src='img/about/1.jpg' alt='About' />
                </div>
@@ -81,6 +81,30 @@ const Home = () => {
          {/* About Section End */}
 
          {/* Portfolio Section Start */}
+         <section className='portfolio-section' id='portfolio'>
+            <div className='container'>
+               <h2 className='portfolio-heading'>
+                  SELECTED <span className='highlight'>WORKS</span>
+               </h2>
+               <div className='portfolio-grid'>
+                  {[1, 2, 3, 4, 5, 6].map((num) => (
+                     <div className='portfolio-item' key={num}>
+                        <img
+                           src={`img/portfolio/${num}.jpg`}
+                           alt={`Portfolio ${num}`}
+                        />
+                        <div className='portfolio-overlay'>
+                           <div>
+                              <span className='portfolio-type'>Design</span>
+                              <h3 className='portfolio-title'>Project {num}</h3>
+                           </div>
+                        </div>
+                     </div>
+                  ))}
+               </div>
+            </div>
+         </section>
+         {/* Portfolio Section End */}
       </div>
    );
 };
