@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import { FaAngleDoubleRight } from 'react-icons/fa';
@@ -11,6 +12,42 @@ import {
 } from 'react-icons/fa';
 
 const Home = () => {
+   const newsData = [
+      {
+         img: 'img/news/1.jpg',
+         title: 'Developers watch out for these burnout symptoms',
+         author: 'Alex Watson',
+         date: '01 January 2022',
+         desc: 'Burnout is a state of emotional, physical, and mental exhaustion caused by excessive and prolonged stress. Developers should be aware of the signs and take steps to prevent it for a healthier work-life balance.',
+      },
+      {
+         img: 'img/news/2.jpg',
+         title: 'How to be appreciated for your hard work as a developer',
+         author: 'Brook Kennedy',
+         date: '22 December 2021',
+         desc: 'Recognition is important for motivation. Learn how to communicate your achievements and foster a culture of appreciation in your team.',
+      },
+      {
+         img: 'img/news/3.jpg',
+         title: 'How designers and developers can collaborate better',
+         author: 'Paola Atkins',
+         date: '05 December 2021',
+         desc: 'Effective collaboration between designers and developers leads to better products. Here are some tips to improve teamwork and communication.',
+      },
+   ];
+
+   const [modalOpen, setModalOpen] = useState(false);
+   const [modalNews, setModalNews] = useState(null);
+
+   const openModal = (news) => {
+      setModalNews(news);
+      setModalOpen(true);
+   };
+   const closeModal = () => {
+      setModalOpen(false);
+      setModalNews(null);
+   };
+
    return (
       <div>
          <Header />
@@ -168,8 +205,88 @@ const Home = () => {
             </div>
          </section>
          {/* Skills Section End */}
-
+         {/* Freelance Section Start */}
+         <section className='freelance-section'>
+            <div className='freelance-container container'>
+               <h2 className='freelance-title'>
+                  I'm available for freelance work
+                  <span className='typewriter-cursor'>_</span>
+               </h2>
+               <a href='#contact' className='freelance-contact-link'>
+                  Contact Me
+               </a>
+            </div>
+         </section>
+         {/* Freelance Section End */}
          {/* News Section Start */}
+         <section className='news-section' id='news'>
+            <div className='container'>
+               <h2 className='news-heading'>
+                  LATEST <span className='highlight'>NEWS</span>
+               </h2>
+               <div className='news-grid'>
+                  {newsData.map((news, idx) => (
+                     <div
+                        className='news-card'
+                        key={idx}
+                        tabIndex={0}
+                        onClick={() => openModal(news)}
+                        onKeyPress={(e) =>
+                           e.key === 'Enter' ? openModal(news) : null
+                        }
+                     >
+                        <img
+                           src={news.img}
+                           alt={news.title}
+                           className='news-img'
+                        />
+                        <div className='news-content'>
+                           <h3 className='news-title'>{news.title}</h3>
+                           <div className='news-meta'>
+                              <span>
+                                 BY{' '}
+                                 <span className='news-author'>
+                                    {news.author}
+                                 </span>{' '}
+                                 | {news.date}
+                              </span>
+                           </div>
+                        </div>
+                     </div>
+                  ))}
+               </div>
+            </div>
+            {/* Modal */}
+            {modalOpen && modalNews && (
+               <div className='news-modal-overlay' onClick={closeModal}>
+                  <div
+                     className='news-modal'
+                     onClick={(e) => e.stopPropagation()}
+                  >
+                     <button
+                        className='news-modal-close'
+                        onClick={closeModal}
+                        aria-label='Close'
+                     >
+                        &times;
+                     </button>
+                     <img
+                        src={modalNews.img}
+                        alt={modalNews.title}
+                        className='news-modal-img'
+                     />
+                     <h3 className='news-modal-title'>{modalNews.title}</h3>
+                     <div className='news-modal-meta'>
+                        BY{' '}
+                        <span className='news-author'>{modalNews.author}</span>{' '}
+                        | {modalNews.date}
+                     </div>
+                     <p className='news-modal-desc'>{modalNews.desc}</p>
+                  </div>
+               </div>
+            )}
+         </section>
+         {/* News Section End */}
 
          {/* Contact Section Start */}
 
