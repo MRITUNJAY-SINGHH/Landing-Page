@@ -4,7 +4,7 @@ import { FaFacebookF, FaTwitter, FaDribbble, FaTiktok } from 'react-icons/fa';
 const Footer = () => (
    <footer className='footer-section'>
       <div className='footer-wave'>
-         <svg
+         {/* <svg
             width='100%'
             height='80'
             viewBox='0 0 1520 52'
@@ -28,10 +28,10 @@ const Footer = () => (
             '
                />
             </path>
-         </svg>
+         </svg> */}
       </div>
       <div className='footer-content container'>
-         <div className='footer-left'>GRAX</div>
+         <div className='footer-left'>TIB</div>
          <div className='footer-center'>
             <a href='#'>
                <FaFacebookF />

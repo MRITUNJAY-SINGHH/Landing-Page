@@ -69,13 +69,14 @@ const Home = () => {
             <div className='banner-overlay'></div>
             <div className='banner-content container'>
                <h1 data-aos='fade-up' data-aos-delay='100'>
-                  Alan Walker
+                  Titanium Bits
                </h1>
                <p data-aos='fade-up' data-aos-delay='400'>
-                  Web &amp; Mobile App Developer
+                  &nbsp;&nbsp;Electronics for you
+                  <span className='typewriter-cursor'>_</span>
                </p>
             </div>
-            <div className='banner-shape'>
+            {/* <div className='banner-shape'>
                <svg
                   x='0px'
                   y='0px'
@@ -89,11 +90,11 @@ const Home = () => {
                      points='-30,300 355.167,210.5 1432.5,290 1920,198.5 1920,300'
                   ></polygon>
                </svg>
-            </div>
+            </div> */}
          </section>
          {/* Banner Section End */}
          {/* About Section Start */}
-         <section className='about-section' id='about'>
+         {/* <section className='about-section' id='about'>
             <div className='about-container container'>
                <div
                   className='about-img'
@@ -147,7 +148,7 @@ const Home = () => {
                   <button className='about-btn'>Download CV</button>
                </div>
             </div>
-         </section>
+         </section> */}
          {/* About Section End */}
          {/* Portfolio Section Start */}
          <section className='portfolio-section' id='portfolio'>
@@ -175,7 +176,7 @@ const Home = () => {
          </section>
          {/* Portfolio Section End */}
          {/* Skills Section Start */}
-         <section className='skills-section'>
+         {/* <section className='skills-section'>
             <div className='skills-container container'>
                <div className='skills-left'>
                   <h2 className='skills-title'>
@@ -228,10 +229,10 @@ const Home = () => {
                   </div>
                </div>
             </div>
-         </section>
+         </section> */}
          {/* Skills Section End */}
          {/* Freelance Section Start */}
-         <section className='freelance-section'>
+         {/* <section className='freelance-section'>
             <div className='freelance-container container'>
                <h2 className='freelance-title'>
                   I'm available for freelance work
@@ -241,13 +242,13 @@ const Home = () => {
                   Contact Me
                </a>
             </div>
-         </section>
+         </section> */}
          {/* Freelance Section End */}
          {/* News Section Start */}
          <section className='news-section' id='news'>
             <div className='container'>
                <h2 className='news-heading'>
-                  LATEST <span className='highlight'>NEWS</span>
+                  LATEST <span className='highlight'>UPDATES</span>
                </h2>
                <div className='news-grid'>
                   {newsData.map((news, idx) => (

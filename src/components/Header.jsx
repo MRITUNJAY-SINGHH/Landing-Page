@@ -3,10 +3,11 @@ import { FaBars, FaTimes } from 'react-icons/fa';
 
 const navLinks = [
    { href: '#home', label: 'Home' },
-   { href: '#about', label: 'About' },
-   { href: '#portfolio', label: 'Portfolio' },
-   { href: '#news', label: 'News' },
-   { href: '#contact', label: 'Contact' },
+   { href: '#about', label: 'About Us' },
+   // { href: '#portfolio', label: 'Portfolio' },
+   { href: '#about', label: 'Order Now' },
+   // { href: '#news', label: 'News' },
+   { href: '#contact', label: 'Contact Us' },
 ];
 
 const Header = () => {
@@ -36,11 +37,13 @@ const Header = () => {
          <div className='container header-container'>
             {scrolled ? (
                <div className='left'>
-                  <img src='img/logo/dark.png' alt='Logo' className='logo' />
+                  {/* <img src='img/logo/dark.png' alt='Logo' className='logo' /> */}
+                  <h4 style={{ color: 'Black', letterSpacing: '5px' }}>TIB</h4>
                </div>
             ) : (
                <div className='left'>
-                  <img src='img/logo/logo.png' alt='Logo' className='logo' />
+                  {/* <img src='img/logo/logo.png' alt='Logo' className='logo' /> */}
+                  <h4 style={{ color: 'white', letterSpacing: '5px' }}>TIB</h4>
                </div>
             )}
 
